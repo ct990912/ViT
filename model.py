@@ -136,8 +136,7 @@ class ViT(nn.Module):
 
         # 将[class] embedding单独取出来输入到分类器中得出分类分数
         x = x[:, 0, :]  # batch_size * embedding_dim
-        x = self.classifier(x[:, 0, :])  # batch_size * num_classes
-
+        x = self.classifier(x)  # batch_size * num_classes
         return x
 
 
