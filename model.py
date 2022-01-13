@@ -1,6 +1,7 @@
 import torch
 from torch import nn
 import math
+from torchsummary import summary
 
 
 class Attention(nn.Module):
@@ -141,6 +142,6 @@ class ViT(nn.Module):
 
 
 if __name__ == "__main__":
-    from torchsummary import summary
+
     net = ViT(224, 4, 3, 10, 128, 3, 8, 4)
     summary(net, (3, 224, 225), 1, 'cpu')
