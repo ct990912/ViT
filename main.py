@@ -60,7 +60,7 @@ def train(lr=0.01):
 
 
 if __name__ == '__main__':
-    epoch = 180
+    epoch = 160
     writer = SummaryWriter("logs")
     net = ViT(32, 4, 3, 10, 128, 3, 8, 4).to(device)
     train_set, val_set = get_set(cifar10_path)
